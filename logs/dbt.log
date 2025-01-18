@@ -1,0 +1,146 @@
+[0m22:28:52.294063 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2c5fb4b9a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2c5e914550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2c5e9145b0>]}
+
+
+============================== 22:28:52.298315 | 642d0fbe-0d55-4014-9340-e3bc1aa01383 ==============================
+[0m22:28:52.298315 [info ] [MainThread]: Running with dbt=1.9.1
+[0m22:28:52.298905 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/alfayyedh/.dbt', 'debug': 'False', 'version_check': 'True', 'log_path': 'logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt init', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m22:28:52.318522 [warn ] [MainThread]: [ConfigFolderDirectory]: Unable to parse logging event dictionary. Failed to parse dir field: expected string or bytes-like object.. Dictionary: {'dir': PosixPath('/home/alfayyedh/.dbt')}
+[0m22:28:52.319073 [info ] [MainThread]: Creating dbt configuration folder at 
+[0m22:28:57.161757 [debug] [MainThread]: Starter project path: /home/alfayyedh/pacmann/data-warehouse/pactravel-dataset/.venv/lib/python3.10/site-packages/dbt/include/starter_project
+[0m22:28:57.172908 [info ] [MainThread]: 
+Your new dbt project "pactravel" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m22:28:57.173686 [info ] [MainThread]: Setting up your profile.
+[0m23:13:13.199198 [error] [MainThread]: Encountered an error:
+
+[0m23:13:13.290129 [error] [MainThread]: Traceback (most recent call last):
+  File "/home/alfayyedh/pacmann/data-warehouse/pactravel-dataset/.venv/lib/python3.10/site-packages/dbt/cli/requires.py", line 153, in wrapper
+    result, success = func(*args, **kwargs)
+  File "/home/alfayyedh/pacmann/data-warehouse/pactravel-dataset/.venv/lib/python3.10/site-packages/dbt/cli/requires.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "/home/alfayyedh/pacmann/data-warehouse/pactravel-dataset/.venv/lib/python3.10/site-packages/dbt/cli/main.py", line 477, in init
+    results = task.run()
+  File "/home/alfayyedh/pacmann/data-warehouse/pactravel-dataset/.venv/lib/python3.10/site-packages/dbt/task/init.py", line 346, in run
+    self.setup_profile(profile_name)
+  File "/home/alfayyedh/pacmann/data-warehouse/pactravel-dataset/.venv/lib/python3.10/site-packages/dbt/task/init.py", line 262, in setup_profile
+    self.create_profile_from_target(adapter, profile_name=profile_name)
+  File "/home/alfayyedh/pacmann/data-warehouse/pactravel-dataset/.venv/lib/python3.10/site-packages/dbt/task/init.py", line 179, in create_profile_from_target
+    self.create_profile_from_profile_template(profile_template, profile_name)
+  File "/home/alfayyedh/pacmann/data-warehouse/pactravel-dataset/.venv/lib/python3.10/site-packages/dbt/task/init.py", line 163, in create_profile_from_profile_template
+    target = self.generate_target_from_input(prompts, initial_target)
+  File "/home/alfayyedh/pacmann/data-warehouse/pactravel-dataset/.venv/lib/python3.10/site-packages/dbt/task/init.py", line 129, in generate_target_from_input
+    target[key] = click.prompt(
+  File "/home/alfayyedh/pacmann/data-warehouse/pactravel-dataset/.venv/lib/python3.10/site-packages/click/termui.py", line 164, in prompt
+    value = prompt_func(prompt)
+  File "/home/alfayyedh/pacmann/data-warehouse/pactravel-dataset/.venv/lib/python3.10/site-packages/click/termui.py", line 147, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m23:13:13.320311 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": false, "command_wall_clock_time": 2661.0713, "process_in_blocks": "44280", "process_kernel_time": 0.318758, "process_mem_max_rss": "90592", "process_out_blocks": "80", "process_user_time": 1.785047}
+[0m23:13:13.332372 [debug] [MainThread]: Command `dbt init` failed at 23:13:13.328514 after 2661.10 seconds
+[0m23:13:13.355536 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2c5fb4b9a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2c5dd7a890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2c5dd7b880>]}
+[0m23:13:13.366772 [debug] [MainThread]: Flushing usage events
+[0m23:13:15.738046 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:19:43.006372 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f907c93ba90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f907d890490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f907d8904f0>]}
+
+
+============================== 23:19:43.010154 | e714d6ef-788b-446d-9687-b027d4f15d09 ==============================
+[0m23:19:43.010154 [info ] [MainThread]: Running with dbt=1.9.1
+[0m23:19:43.010649 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/alfayyedh/.dbt', 'version_check': 'True', 'warn_error': 'None', 'log_path': 'logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'invocation_command': 'dbt init', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m23:19:56.551399 [info ] [MainThread]: A project called pactravel already exists here.
+[0m23:19:56.556635 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 13.604292, "process_in_blocks": "944", "process_kernel_time": 0.699002, "process_mem_max_rss": "86612", "process_out_blocks": "8", "process_user_time": 1.094856}
+[0m23:19:56.557741 [debug] [MainThread]: Command `dbt init` succeeded at 23:19:56.557447 after 13.61 seconds
+[0m23:19:56.559259 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f907c93ba90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f907d890490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f907d890550>]}
+[0m23:19:56.560205 [debug] [MainThread]: Flushing usage events
+[0m23:19:58.406433 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:24:14.337631 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa2533fba00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa254350550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa2543505b0>]}
+
+
+============================== 23:24:14.340534 | ff42b517-706e-4e25-993d-1dec1f7ecfb5 ==============================
+[0m23:24:14.340534 [info ] [MainThread]: Running with dbt=1.9.1
+[0m23:24:14.341045 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/alfayyedh/.dbt', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt init pactravel', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m23:24:14.349019 [debug] [MainThread]: Starter project path: /home/alfayyedh/pacmann/data-warehouse/pactravel-dataset/.venv/lib/python3.10/site-packages/dbt/include/starter_project
+[0m23:24:14.360133 [info ] [MainThread]: 
+Your new dbt project "pactravel" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m23:24:14.360793 [info ] [MainThread]: Setting up your profile.
+[0m23:25:18.425285 [info ] [MainThread]: Profile pactravel written to /home/alfayyedh/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m23:25:18.431095 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 64.14765, "process_in_blocks": "8", "process_kernel_time": 0.199815, "process_mem_max_rss": "91164", "process_out_blocks": "88", "process_user_time": 1.268828}
+[0m23:25:18.432658 [debug] [MainThread]: Command `dbt init` succeeded at 23:25:18.432342 after 64.15 seconds
+[0m23:25:18.434068 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa2533fba00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa25256b6d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa254350610>]}
+[0m23:25:18.436667 [debug] [MainThread]: Flushing usage events
+[0m23:25:20.343323 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:40:29.534834 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcdae647d30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcdaf5abfd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcdaf5abf40>]}
+
+
+============================== 21:40:29.541873 | aaf95b08-c29f-4d26-b4d3-6e4ee2b812dc ==============================
+[0m21:40:29.541873 [info ] [MainThread]: Running with dbt=1.9.1
+[0m21:40:29.542714 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/alfayyedh/.dbt', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'invocation_command': 'dbt deps', 'log_format': 'default', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m21:40:29.544052 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /home/alfayyedh/pacmann/data-warehouse/pactravel-dataset/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m21:40:29.546657 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_success": false, "command_wall_clock_time": 0.077500254, "process_in_blocks": "34744", "process_kernel_time": 0.802435, "process_mem_max_rss": "86140", "process_out_blocks": "24", "process_user_time": 1.482981}
+[0m21:40:29.547292 [debug] [MainThread]: Command `dbt deps` failed at 21:40:29.547145 after 0.08 seconds
+[0m21:40:29.547825 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcdae647d30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcdaf5abaf0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcdaf5a80d0>]}
+[0m21:40:29.548327 [debug] [MainThread]: Flushing usage events
+[0m21:40:33.931336 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:43:31.568554 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa767bfbd90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa7669cbd30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa7669cbfd0>]}
+
+
+============================== 23:43:31.571599 | d2918beb-5a8c-4b4d-bc21-23386fb7fdee ==============================
+[0m23:43:31.571599 [info ] [MainThread]: Running with dbt=1.9.1
+[0m23:43:31.572191 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'logs', 'profiles_dir': '/home/alfayyedh/.dbt', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt deps', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m23:43:31.572948 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /home/alfayyedh/pacmann/data-warehouse/pactravel-dataset/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m23:43:31.573995 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_success": false, "command_wall_clock_time": 0.06953937, "process_in_blocks": "16", "process_kernel_time": 0.099475, "process_mem_max_rss": "86280", "process_out_blocks": "8", "process_user_time": 1.193705}
+[0m23:43:31.574493 [debug] [MainThread]: Command `dbt deps` failed at 23:43:31.574384 after 0.07 seconds
+[0m23:43:31.574898 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa767bfbd90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa7669cbc40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa7669cbaf0>]}
+[0m23:43:31.575343 [debug] [MainThread]: Flushing usage events
+[0m23:43:33.281001 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m00:02:43.012152 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fefd8ccbca0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fefd9c20850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fefd9c207c0>]}
+
+
+============================== 00:02:43.018539 | da42cb9f-f77c-41dc-93f4-9ee0924e2566 ==============================
+[0m00:02:43.018539 [info ] [MainThread]: Running with dbt=1.9.1
+[0m00:02:43.020180 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': '/home/alfayyedh/.dbt', 'log_path': 'logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt run', 'send_anonymous_usage_stats': 'True'}
+[0m00:02:43.021433 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /home/alfayyedh/pacmann/data-warehouse/pactravel-dataset/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m00:02:43.023098 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.07325564, "process_in_blocks": "536", "process_kernel_time": 0.268918, "process_mem_max_rss": "86260", "process_out_blocks": "16", "process_user_time": 1.225072}
+[0m00:02:43.023818 [debug] [MainThread]: Command `dbt run` failed at 00:02:43.023599 after 0.07 seconds
+[0m00:02:43.024465 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fefd8ccbca0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fefd9c20f10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fefd9c20850>]}
+[0m00:02:43.025106 [debug] [MainThread]: Flushing usage events
+[0m00:02:44.748174 [debug] [MainThread]: An error was encountered while trying to flush usage events
